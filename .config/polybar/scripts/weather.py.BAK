@@ -1,0 +1,8 @@
+import requests
+
+cityCode = ""
+
+url = "http://dataservice.accuweather.com/currentconditions/v1/27623"
+data = {"apikey":"cvHFCFC0uDeJtefCASp554EJzZGWAxNd", "unit":"Celsius"}
+res = requests.get(url, params=data).json()
+print(res)
