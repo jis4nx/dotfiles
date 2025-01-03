@@ -1,12 +1,28 @@
+[manager]
+sort_by = "natural"
 [opener]
 edit = [
 	{ run = 'nvim "$@"', block = true, for = "unix" },
 	{ run = "nvim %*",   block = true, for = "windows" },
 ]
 play = [
-	{ run = 'vlc "$@"', orphan = true, for = "unix" },
+	{ run = 'mpv "$@"', orphan = true, for = "unix" },
 	{ run = '"C:\Program Files\mpv.exe" %*', orphan = true, for = "windows" }
 ]
 open = [
 	{ run = 'xdg-open "$@"', desc = "Open" },
 ]
+openimv = [
+  {run = 'imv "$@"', desc="Imv"}
+  ]
+
+
+[open]
+rules = [
+{mime="image/*", use="openimv"},
+{mime="text/*", use="edit"},
+{mime="video/*", use="play"},
+{mime="application/pdf", use="open"}
+]
+
+
