@@ -2,7 +2,7 @@
   border: none;
   border-radius: 0px;
   /*font-family: VictorMono, Iosevka Nerd Font, Noto Sans CJK;*/
-  font-family: Iosevka;
+  font-family: Iosevka Nerd Font;
   font-size: 14px;
   font-style: normal;
   min-height: 0;
@@ -61,6 +61,15 @@ window#waybar {
 
 #custom-date {
   color: #d3869b;
+}
+
+#custom-weather{
+  border-radius: 16px;
+  margin: 5px 5px 5px 5px;
+  padding: 0px 5px 0px 5px;
+  background-color:#282828;
+  font-weight:bold;
+
 }
 
 #custom-power {
@@ -161,6 +170,12 @@ window#waybar {
   border-radius: 8px;
   margin-right: -5px;
   margin-left: 10px;
+}
+
+#custom-menu {
+  margin-left:5px;
+  margin-right:5px;
+  font-size:1.5rem;
 }
 
 #custom-playerctl {
